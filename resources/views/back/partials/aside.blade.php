@@ -31,5 +31,12 @@
                 <div data-i18n="Analytics">Time Slots</div>
             </a>
         </li>
+        <li class="menu-item ">
+            <a href="{{route('dashboard.event-days.index')}}" class="menu-link">
+                
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Event Days</div>
+            </a>
+        </li>
     </ul>
 </aside>

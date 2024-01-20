@@ -1,8 +1,6 @@
 @extends('back.master')
 @section('title', 'Dashboard | Time Slots')
 @section('content')
-
-    <!-- page title -->
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
@@ -18,16 +16,15 @@
                 @csrf
                 @method('PUT')
                 <div id="add_form_messages"></div>
-                {{-- MODIFICATIONS FROM HERE --}}
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label class="form-label">Start time</label>
-                        <input type="time" class="border form-control" name="start_time" placeholder="Please enter start time" value="{{ $timeSlot->start_time }}">
+                        <input type="time" class="border form-control" name="start_time"  step="2"  placeholder="Please enter start time" value="{{ $timeSlot->start_time }}">
                         <x-input-error :messages="$errors->get('start_time')" class="mt-2" />
                     </div>
                     <div class="form-group col-md-6">
                         <label class="form-label">End time</label>
-                        <input type="time" class="border form-control" name="end_time" placeholder="Please enter end time" value="{{ $timeSlot->end_time }}">
+                        <input type="time" class="border form-control" name="end_time" step="2" placeholder="Please enter end time" value="{{ $timeSlot->end_time }}">
                         <x-input-error :messages="$errors->get('end_time')" class="mt-2" />
                     </div>
                 </div>
