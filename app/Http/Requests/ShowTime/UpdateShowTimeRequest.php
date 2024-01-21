@@ -17,6 +17,13 @@ class UpdateShowTimeRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'movie_id'     => ['required', 'exists:movies,id'],
+            'time_slot_id' => ['required', 'exists:time_slots,id'],
+            'event_day_id' => ['required', 'exists:event_days,id'],
+        ];
+    }
+    public function attributes(): array{
+        return [
             'movie_id'     => 'Movie',
             'time_slot_id' => 'Time slot',
             'event_day_id' => 'Event day',
