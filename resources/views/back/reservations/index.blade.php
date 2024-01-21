@@ -6,9 +6,6 @@
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                 <h2 class="h5 page-title">Reservations</h2>
                 <div class="page-title-right">
-                    {{-- <a href="{{ route('dashboard.time-slots.create') }}" class="btn btn-primary" >
-                        Add new
-                    </a> --}}
                 </div>
             </div>
         </div>

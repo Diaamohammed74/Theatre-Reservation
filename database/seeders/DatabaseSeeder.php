@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             MovieSeeder::class,
             EventDaySeeder::class,
             TimeSlotSeeder::class,
+            ShowTimeSeeder::class,
         ]);
     }
 }
