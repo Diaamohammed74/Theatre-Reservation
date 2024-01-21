@@ -1,5 +1,4 @@
 <tr class="text-center">
-    <td>1</td>
     <td>{{ $eventDay->date }}</td>
     <td>
         <form action="{{ route('dashboard.event-days.edit', $eventDay->id) }}" method="get" style="display: inline;">

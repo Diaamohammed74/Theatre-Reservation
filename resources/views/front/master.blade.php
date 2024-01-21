@@ -7,8 +7,9 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
+
             <!-- aside -->
-            @include('back.partials.aside')
+            {{-- @include('back.partials.aside') --}}
             <!-- / aside -->
 
             <!-- Layout container -->

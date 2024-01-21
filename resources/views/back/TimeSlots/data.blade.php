@@ -1,5 +1,4 @@
 <tr class="text-center">
-    <td>1</td>
     <td>{{ $timeSlot->formatted_start_time}}</td>
     <td>{{ $timeSlot->formatted_end_time }}</td>
     <td>

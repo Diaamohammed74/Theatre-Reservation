@@ -26,7 +26,7 @@ class EventDayController extends Controller
     public function store(CreateEventDayRequset $request)
     {
         $eventDay = EventDay::create($request->validated());
-        return redirect()->route('dashboard.event-days.index')->with('success', 'Event Day addded successfully');
+        return back()->with(['message' => __('lang.added'), 'type' => 'success']);
     }
 
     public function edit(EventDay $eventDay)
@@ -40,7 +40,7 @@ class EventDayController extends Controller
     public function update(UpdateEventDayRequset $request, EventDay $eventDay)
     {
         $eventDay->update($request->validated());
-        return redirect()->route('dashboard.event-days.index')->with('success', 'Event Day udpated successfully');
+        return redirect()->route('dashboard.event-days.index')->with(['message' => __('lang.updated'), 'type' => 'success']);
     }
 
     /**
@@ -49,6 +49,6 @@ class EventDayController extends Controller
     public function destroy(EventDay $eventDay)
     {
         $eventDay->delete();
-        return redirect()->route('dashboard.event-days.index')->with('success', 'Event Day deleted successfully');
+        return redirect()->route('dashboard.event-days.index')->with(['message' => __('lang.deleted'), 'type' => 'danger']);
     }
 }

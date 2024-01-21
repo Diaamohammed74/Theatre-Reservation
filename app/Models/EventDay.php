@@ -11,4 +11,12 @@ class EventDay extends Model
     protected $fillable=[
         'date',
     ];
+    public function scopeAfterOrEqualToday($query){
+        return $query->where('date', '>=', today());
+    }
+    public function scopeNextWeek($query)
+    {
+        return $query->whereBetween('date', [today(), today()->addDays(6)]);
+    }
+    
 }

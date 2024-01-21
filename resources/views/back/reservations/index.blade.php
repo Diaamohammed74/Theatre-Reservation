@@ -1,14 +1,14 @@
 @extends('back.master')
-@section('title', 'Dashboard | Time Slots')
+@section('title', 'Dashboard | Reservations')
 @section('content')
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h2 class="h5 page-title">Time Slots</h2>
+                <h2 class="h5 page-title">Reservations</h2>
                 <div class="page-title-right">
-                    <a href="{{ route('dashboard.time-slots.create') }}" class="btn btn-primary" >
+                    {{-- <a href="{{ route('dashboard.time-slots.create') }}" class="btn btn-primary" >
                         Add new
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>
@@ -19,13 +19,17 @@
                 <table class="table table-striped">
                     <thead class="text-center">
                         <tr style="font-family: Arial">
-                            <th>Start time</th>
-                            <th>End time</th>
-                            <th>Actions</th>
+                            <th>Full name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Theatre event day</th>
+                            <th>Movie</th>
+                            <th>From </th>
+                            <th>To </th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                        @each('back.TimeSlots.data', $timeSlots, 'timeSlot', 'back.TimeSlots.empty')
+                        @each('back.reservations.data', $reservations, 'reservation', 'back.reservations.empty')
                     </tbody>
                 </table>
                 

@@ -22,7 +22,7 @@ class TimeSlotController extends Controller
     public function store(CreateTimeSlotRequset $createTimeSlotRequset)
     {
         $timeSlot = TimeSlot::create($createTimeSlotRequset->validated());
-        return redirect()->route('dashboard.time-slots.index')->with('success', 'Time Slot addded successfully');
+        return back()->with(['message' => __('lang.added'), 'type' => 'success']);
     }
 
     public function edit(TimeSlot $timeSlot)
@@ -33,12 +33,12 @@ class TimeSlotController extends Controller
     public function update(UpdateTimeSlotRequset $updateTimeSlotRequset, TimeSlot $timeSlot)
     {
         $timeSlot->update($updateTimeSlotRequset->validated());
-        return redirect()->route('dashboard.time-slots.index')->with('success', 'Time slot udpated successfully');
+        return redirect()->route('dashboard.time-slots.index')->with(['message' => __('lang.updated'), 'type' => 'success']);
     }
 
     public function destroy(TimeSlot $timeSlot)
     {
         $timeSlot->delete();
-        return redirect()->route('dashboard.time-slots.index')->with('error', 'Time slot deleted successfully');
+        return redirect()->route('dashboard.time-slots.index')->with(['message' => __('lang.deleted'), 'type' => 'danger']);
     }
 }

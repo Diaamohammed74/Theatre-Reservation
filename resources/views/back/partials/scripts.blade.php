@@ -16,16 +16,6 @@
 
     <!-- Page JS -->
     <script src="{{asset('assets-front')}}/js/dashboards-analytics.js"></script>
+    {{-- <script src="https://fastly.jsdelivr.net/npm/toastify-js"></script> --}}
 
-    <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            $('.timepicker').timepicker({
-                showInputs: false,
-                showMeridian: false,
-                defaultTime: false
-            });
-        });
-    </script>

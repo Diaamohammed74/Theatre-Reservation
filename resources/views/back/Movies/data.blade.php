@@ -1,5 +1,4 @@
 <tr class="text-center" >
-    <td>1</td>
     <td>{{ $movie->name }}</td>
     <td>
         <form action="{{ route('dashboard.movies.edit', $movie->id) }}" method="get" style="display: inline;">
